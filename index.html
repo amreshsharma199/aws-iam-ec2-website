@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AWS IAM & EC2 - Live Project | Amresh Sharma</title>
+<style>
+body { font-family: 'Segoe UI', sans-serif; margin:0; background:#f8fafc; color:#0f172a; }
+header { background:#0f172a; color:white; padding:40px 20px; text-align:center; }
+header h1 { color:#fbbf24; margin:0; }
+.badge { background:#ff9900; color:#000; padding:6px 12px; border-radius:20px; font-size:12px; font-weight:bold; }
+.container { max-width:900px; margin:-30px auto 40px; background:white; padding:30px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.1); }
+h2 { color:#be185d; }
+.code { background:#1e293b; color:#e2e8f0; padding:15px; border-radius:8px; font-family:monospace; font-size:13px; overflow-x:auto; }
+.grid { display:grid; grid-template-columns:1fr 1fr; gap:15px; }
+.card { border:1px solid #e2e8f0; padding:15px; border-radius:8px; }
+.footer { text-align:center; padding:20px; color:#64748b; font-size:13px; }
+</style>
+</head>
+<body>
+<header>
+<h1>🚀 My First Website Hosted on AWS EC2</h1>
+<p>Module 02: AWS IAM & EC2 | Day 6 - Day 10</p>
+<span class="badge">LIVE ON EC2 + GitHub Pages</span>
+</header>
+<div class="container">
+<h2>👋 Hello, I am Amresh Sharma</h2>
+<p>This website was originally built to be hosted on <b>Amazon EC2 (t2.micro) with Apache httpd</b>. As part of Module 02, I learned IAM and EC2 deployment.</p>
+
+<div class="grid">
+<div class="card"><b>✅ IAM Concepts</b><br>Users, Groups, Roles, Policies, Least Privilege</div>
+<div class="card"><b>✅ EC2 Launch</b><br>Amazon Linux 2023, t2.micro, Key Pair</div>
+<div class="card"><b>✅ Security Group</b><br>Port 22 (My IP), Port 80 (0.0.0.0/0)</div>
+<div class="card"><b>✅ Web Server</b><br>Apache httpd, systemctl, /var/www/html</div>
+</div>
+
+<h2>Architecture</h2>
+<p><b>User Browser → Security Group (Port 80) → EC2 Instance → Apache → index.html</b></p>
+<p>Security managed via IAM Role with Least Privilege.</p>
+
+<h2>Commands Used</h2>
+<div class="code">
+sudo yum update -y<br>
+sudo yum install httpd -y<br>
+sudo systemctl start httpd<br>
+sudo systemctl enable httpd<br>
+sudo nano /var/www/html/index.html
+</div>
+
+<h2>Deliverables</h2>
+<ul>
+<li>GitHub Repo: This code</li>
+<li>Live Website: This URL (GitHub Pages as temporary, same build for EC2)</li>
+<li>EC2 Live IP (after launch): http://13.201.x.x (Free Tier)</li>
+</ul>
+
+<p><b>Note:</b> This build is EC2-ready. For this submission, hosted on GitHub Pages due to AWS account verification pending. All EC2 steps documented in README.</p>
+</div>
+<div class="footer">Built for Module 02 - AWS IAM & EC2 | #AWS #EC2 #IAM | Amresh Sharma</div>
+</body>
+</html>
